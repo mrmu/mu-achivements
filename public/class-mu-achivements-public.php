@@ -148,7 +148,7 @@ class Mu_Achivements_Public {
 		}
 	
 		global $wpdb;
-		$sql = "SELECT type FROM {$wpdb->prefix}mu_archivements WHERE email = '{$author_obj->user_email}' ";
+		$sql = "SELECT type FROM {$wpdb->prefix}mu_achivements WHERE email = '{$author_obj->user_email}' ";
 		$results = $wpdb->get_results($sql);
 		
 		wp_cache_set( $user_id, $results, 'mu_achids' );

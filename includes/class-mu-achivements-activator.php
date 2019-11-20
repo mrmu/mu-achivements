@@ -32,14 +32,14 @@ class Mu_Achivements_Activator {
 	public static function activate() {
 		global $wpdb;
 		$sql = <<<SQL
-CREATE TABLE `{$wpdb->prefix}mu_archivements` (
+CREATE TABLE `{$wpdb->prefix}mu_achivements` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` int(20) unsigned DEFAULT 0,
   `create_date` date DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `EMAIL` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 SQL;
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
